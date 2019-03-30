@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Sair da conta</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/simple-sidebar.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/estiloestrela.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    </head>
+    <body>
+        <header>
+            <div id="wrapper">
+                <div style="z-index: 1; background-color:#DC3545; color:white;" id="sidebar-wrapper">
+                </div>
+                <div class="text-center pb-3 pt-3" style="position:absolute; left:0%;  right:0%; float:inherit; background-color: #DD3445; text-decoration: none;">
+                    <img src="img/logo.png" alt="menu"/>
+                </div>
+                <div id="page-content-wrapper">
+                    <div>
+                        <a class="btn btn-link" href="#menu-toggle" id="menu-toggle"></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="row col-12 mt-3">
+                <div class="col-1"></div>
+                <div class="col-10 ml-3 mt-5">
+                    <div id="my-tab-content" class="tab-content">  					
+                        <div class="text-center mt-5">
+                            <h3 class="login mb-3">Tem certeza que deseja sair da conta?</h3>
+                            <div class="mt-5">
+                                <button onclick="logout()" class="btn btn-danger btn-default btn-block mb-2">Sair</button>
+                                <a class="btn btn-default btn-block bg-dark text-white" onclick=" window.history.back();">Voltar</a>
+                            </div>             			
+                        </div>							
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+
+        </main>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/Json.js"></script>
+        <!-- Menu Toggle Script
+        <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+        </script> -->
+    </body>
+</html>

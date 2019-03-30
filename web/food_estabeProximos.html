@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Estabelecimentos Próximos</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/simple-sidebar.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/estiloestrela.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    </head>
+    <body onload = "carregarestabSL();">
+        <header>
+            <div id="wrapper">
+                <div style="z-index: 1; background-color:#DC3545; color:white;" id="sidebar-wrapper">
+                    <ul class="sidebar-nav" style="font-size: 18px">
+                        <li>
+                            <a href="food_login.html">Login</a>
+                        </li>
+                        <li>
+                            <a href="food_cadastroCliente.html">Cadastro</a>
+                        </li>
+                        <li>
+                            <a href="food_insLocSL.html">Inserir Localização</a>
+                        </li>
+                        <li>
+                            <a href="food_convidarAmigo.html">Convidar Amigos</a>
+                        </li>
+                        <li>
+                            <a href="food_sobre.html">Sobre</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center pb-3 pt-3" style="position:absolute; left:0%;  right:0%; float:inherit; background-color: #DD3445; text-decoration: none;">
+                    <img src="img/logo.png" alt="menu"/>
+                </div>
+                <div id="page-content-wrapper">
+                    <div>
+                        <a class="btn btn-link" href="#menu-toggle" id="menu-toggle">
+                            <img src="img/glyphicons-517-menu-hamburger.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <h4 class="text-center mb-4 mt-4">Estabelecimentos Próximos</h4>
+                <label class="text-center mb-2">Clique nos estabelecimentos para mais detalhes.</label>
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col-10">
+                        <ul class="list-unstyled">
+                            <div id="divCorpoHtml">
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+        </main>
+        <!-- Bootstrap core JavaScript -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/Json.js"></script>
+        <!-- Menu Toggle Script -->
+        <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+        </script>
+    </body>
+
+</html>

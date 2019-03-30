@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <title>Cadastro proprietario</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/simple-sidebar.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/estiloestrela.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <script src="js/Json.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="wrapper">
+                <div style="z-index: 1; background-color:#DC3545; color:white;" id="sidebar-wrapper">
+                    <ul class="sidebar-nav" style="font-size: 18px">
+                        <li>
+                            <a href="food_login.html">Login</a>
+                        </li>
+                        <li>
+                            <a href="food_cadastroCliente.html">Cadastro</a>
+                        </li>
+                        <li>
+                            <a href="food_convidarAmigo.html">Convidar Amigos</a>
+                        </li>
+                        <li>
+                            <a href="food_sobre.html">Sobre</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center pb-3 pt-3" style="position:absolute; left:0%;  right:0%; float:inherit; background-color: #DD3445; text-decoration: none;">
+                    <img src="img/logo.png" alt="menu"/>
+                </div>
+                <div id="page-content-wrapper">
+                    <div>
+                        <a class="btn btn-link" href="#menu-toggle" id="menu-toggle">
+                            <img src="img/glyphicons-517-menu-hamburger.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="row mt-5 mb-5">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <h2 class="text-center mt-3 mb-3">Cadastro</h2>
+                    <div class="text-center mb-2">
+                        <input type="radio" class="" id="radioButton" name="cliente" value="cliente" onclick="window.location = 'food_cadastroCliente.html'" required> Cliente
+                        <input type="radio" class="" id="radiobutton" checked name="proprietario" value="proprietario" onclick="window.location = 'food_cadastroProprietario.html'">Estabelecimento
+                    </div>
+                    <form name="form1" >
+                        <input type="text" class="form-control mb-2" placeholder="Nome Fantasia" id="nome" required>
+                        <input type="text" class="form-control mb-2" onkeypress="return letra(event);" placeholder="Razão Social" id = "raz" required>
+                        <input type="text" class="form-control mb-2" placeholder="CNPJ" id="cnpj" required maxlength="18" onKeyPress="MascaraCNPJ(form1.cnpj)">
+                        <input type="text" class="form-control mb-2" placeholder="Inscrição Estadual"  id="ie" required>
+
+                        <div  class="text-center mb-2">
+                            <div class="form-check form-check-inline">
+                            </div>
+                            <h6 class="text-center">Dias e horários de funcionamento</h6>
+                            <div class="row">
+                                <div class="col-4">
+                                    <input class="form-check-input" id="seg"  onclick = "test();" type="checkbox"  value="option1">
+                                    Seg
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label>Abertura</label>
+                                        <input type="time"  id="seghri" disabled class="form-control mb-2" required>
+                                    </div>
+                                    <div class="col-6">
+                                        <label>Fechamento</label>
+                                        <input type="time" id="seghrf" disabled class="form-control mb-2" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <input class="form-check-input" id="ter" onclick = "test2();" type="checkbox"  value="option1">
+                                    Ter
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label>Abertura</label>
+                                        <input type="time" id = "terhra" disabled class="form-control mb-2" required>
+                                    </div>
+                                    <div class="col-6">
+                                        <label>Fechamento</label>
+                                        <input type="time" id = "terhrf" disabled class="form-control mb-2" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <input class="form-check-input" id="qua" onclick = "test3();" type="checkbox"  value="option1">
+                                    Qua
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label>Abertura</label>
+                                        <input type="time"  id = "quahra" disabled class="form-control mb-2" required>
+                                    </div>
+                                    <div class="col-6">
+                                        <label>Fechamento</label>
+                                        <input type="time" id = "quahrf" disabled class="form-control mb-2" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <input class="form-check-input" id="qui" onclick = "test4();" type="checkbox"  value="option1">
+                                    Qui
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label>Abertura</label>
+                                        <input type="time"  id = "quihra" disabled class="form-control mb-2" required>
+                                    </div>
+                                    <div class="col-6">
+                                        <label>Fechamento</label>
+                                        <input type="time"  id = "quihrf" disabled class="form-control mb-2" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <input class="form-check-input" id="sex" onclick = "test5();" type="checkbox"  value="option1">
+                                    Sex
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label>Abertura</label>
+                                        <input type="time" id = "sexhra" disabled class="form-control mb-2" required>
+                                    </div>
+                                    <div class="col-6">
+                                        <label>Fechamento</label>
+                                        <input type="time"  id = "sexhrf" disabled class="form-control mb-2" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <input class="form-check-input" id="sab" onclick = "test6();" type="checkbox"  value="option1">
+                                    Sáb
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label>Abertura</label>
+                                        <input type="time" id = "sabhra" disabled class="form-control mb-2" required>
+                                    </div>
+                                    <div class="col-6">
+                                        <label>Fechamento</label>
+                                        <input type="time" id = "sabhrf" disabled class="form-control mb-2" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <input class="form-check-input"  id="dom" onclick = "test7();" type="checkbox"  value="option1">
+                                    Dom
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label>Abertura</label>
+                                        <input type="time" id = "domhra" disabled class="form-control mb-2" required>
+                                    </div>
+                                    <div class="col-6">
+                                        <label>Fechamento</label>
+                                        <input type="time" id = "domhrf" disabled class="form-control mb-2" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mb-3">	
+                            <textarea class="form-control mb-2" id="descricao" maxlength="250" name="descricao" style="height:100px; width: 100%;" placeholder="Descrição - Máximo 250 caracteres"  required></textarea>
+                        </div> 
+                        <input type="text" class="form-control mb-2" placeholder="Telefone" id="tel" onKeyPress="MascaraTelefone(form1.tel);return SomenteNumero(event)" maxlength="15" required>
+                        <input type="hidden" value ="1"  id="id">
+                        <input type="email" class="form-control mb-2" placeholder="Email" id ="email" required>
+                        <input type="password" class="form-control mb-2" id="senha" placeholder="Senha" required>
+                        <input type="password" class="form-control mb-2" id="csenha" placeholder="Confirmar Senha" required>
+                        <input type="button" class="btn btn-danger btn-default btn-block" value="Cadastrar" onclick="testar();">
+                        <button class="btn btn-default btn-block bg-dark text-white" type="reset">Limpar</button>
+                    </form>
+                </div>
+            </div>	
+            <div class="col-1" id="divCorpoHtml"></div>
+
+        </main>
+
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/validacao.js"></script>
+        <script src="js/validacaol.js"></script>
+        <script src="js/Json.js"></script>
+
+        <!-- Menu Toggle Script -->
+        <script>
+                            $("#menu-toggle").click(function (e) {
+                                e.preventDefault();
+                                $("#wrapper").toggleClass("toggled");
+                            });
+        </script>
+
+    </body>
+
+
+</html>

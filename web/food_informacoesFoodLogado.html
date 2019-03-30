@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Informações</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/simple-sidebar.css" rel="stylesheet">
+        <link href="css/estiloestrela.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/estiloestrela.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <script src="js/Json.js"></script>
+        <script>
+            window.addEventListener("load", myInit, true);
+            function myInit() {
+                infoestabSL();
+                carregarCardapio();
+                carregaravaC();
+            }
+            ;
+        </script>
+        <style>
+            #map {
+                width: 100%;
+                height: 300px;
+                background-color: grey;
+            }
+        </style>
+        <style type="text/css">
+            a:link, a:visited {
+                color: white;
+            }
+
+            a:hover {
+                color: white;
+            }
+
+            a:active {
+                color: black;
+            }
+        </style>
+    </head>
+    <body onload = "infoestab();">
+        <header>
+            <div id="wrapper">
+                <div style="z-index: 1; background-color:#DC3545; color:white;" id="sidebar-wrapper">
+                    <ul class="sidebar-nav" style="font-size: 18px">
+                        <li>
+                            <a href="food_estabeProximosCliente.html">Página Inicial</a>
+                        </li>
+                        <li>
+                            <a href="food_insLocClienteLog.html">Inserir Localização</a>
+                        </li>
+                        <li>
+                            <a href="food_minhaContac.html">Minha Conta</a>
+                        </li>
+                        <li>
+                            <a href="food_convidarAmigoLogadoC.html">Convidar Amigo</a>
+                        </li>
+                        <li>
+                            <a href="food_sobreC.html">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="food_sairContaC.html">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center pb-3 pt-3" style="position:absolute; left:0%;  right:0%; float:inherit; background-color: #DD3445; text-decoration: none;">
+                    <img src="img/logo.png" alt="menu"/>
+                </div>
+                <div id="page-content-wrapper">
+                    <div>
+                        <a class="btn btn-link" href="#menu-toggle" id="menu-toggle">
+                            <img src="img/glyphicons-517-menu-hamburger.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <ul class="nav nav-tabs nav-justified" style="background-color:#DC3545; margin-top: 10.4px;">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#panel1" role="tab">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#panel2" role="tab">Avaliações</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#panel3" role="tab">Informações</a>
+                </li>
+            </ul>
+
+            <!--CARDAPIO-->
+
+            <div class="tab-content mt-4">
+                <div class="tab-pane fade in show active" id="panel1" role="tabpanel">
+                    <h4 class="text-center mb-4">Cardápio</h4>
+                    <div class="container">
+                        <div>
+                            <div id="cardapio">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--AVALIACAO-->
+
+                <div class="tab-pane fade mt-4" id="panel2" role="tabpanel">
+                    <h4 class="text-center mb-4">Avaliações</h4>
+                    <div class="col-12">
+                        <div class="container" id="avaliar">
+                        </div>
+                        <div class="mb-3"></div>
+                    </div>
+                    <div class="col-12">
+                        <div  id ="bot"></div> 
+                    </div>
+                </div>
+
+                <!--INFORMACOES-->
+
+                <div class="tab-pane fade" id="panel3" role="tabpanel">
+                    <div class="row col-12">
+                        <div class="col-1"></div>
+                        <div class="col-12 ml-3" id="teste">
+
+                        </div>
+                        <script async defer
+                                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNiXGFq1hj1WdJ5t8mruEsuOEnzR1xt2w&callback=latit">
+                        </script>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row col-12">
+                        <div class="col-1"></div>
+                        <div class="col-12 ml-3">
+                            <div id='map'></div>
+                        </div>
+
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+
+        <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+        </script>
+    </body>
+</html>

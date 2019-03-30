@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Convidar amigos.</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/simple-sidebar.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/estiloestrela.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    </head>
+    <body>
+        <header>
+            <div class="ml-4 mt-4">
+                <a  class="btn btn-danger btn-default" href="food_login.html">Fazer Login</a>
+            </div>
+        </header>
+        <main>
+            <div class="row col-12">
+                <div class="col-1"></div>
+                <div class="col-10 ml-3">
+                    <div class="d-flex flex-column align-items-center p-3 px-md-2">
+                        <img class="img3" src="img/logo1.png" width="230" height="250" alt=" Logotipo, uma imagem de um simbolo de localização vermelho contendo um circulo branco e um garfo e uma colher vermelha dentro" style="padding-bottom:25px;">
+                        <h6 class="mb-3 text-center">O FindFood precisa saber da sua localização para continuar</h6>
+                        <button class="btn btn-danger btn-default btn-block mb-2" onclick="getLocation()">Usar o GPS para definir a <br>localização</button>
+                        <a href="food_insLoc.html" class="btn btn-default btn-block bg-dark text-white">Digitar a localização</a>
+                    </div>             			
+                </div>							
+            </div>	
+            <div class="col-1"></div>
+        </main>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/gps.js"></script>
+        <script src="js/Json.js"></script>
+        <script>
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+            });
+        </script>
+    </body>
+</html>

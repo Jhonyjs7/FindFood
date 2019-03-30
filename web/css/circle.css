@@ -1,0 +1,14 @@
+.circle {
+                background-color: #aaa;
+                border-radius: 50%;
+                width: 70px;
+                height: 70px;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .circle img {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }

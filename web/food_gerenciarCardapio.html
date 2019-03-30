@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Gerenciar cardapio</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/simple-sidebar.css" rel="stylesheet">
+        <script src="js/Json.js"></script>
+        <link type="text/css" rel="stylesheet" href="css/estiloestrela.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    </head>
+    <body onload="gerenciarCardapio();">
+        <header>
+            <div id="wrapper">
+                <div style="z-index: 1; background-color:#DC3545; color:white;" id="sidebar-wrapper">
+                    <ul class="sidebar-nav" style="font-size: 18px">
+                        <li>
+                            <a href="food_estabeProximosProp.html">Página Inicial</a>
+                        </li>
+                        <li>
+                            <a href="food_insLocPropLog.html">Inserir Localização</a>
+                        </li>
+                        <li>
+                            <a href="food_gerenciarCardapio.html">Gerenciador de Cardápio</a>
+                        </li>
+                        <li>
+                            <a href="food_avaliacoes.html">Avaliações Recebidas</a>
+                        </li>
+                        <li>
+                            <a href="food_minhaContaP.html">Minha Conta</a>
+                        </li>
+                        <li>
+                            <a href="food_convidarAmigoLogadoP.html">Convidar Amigos</a>
+                        </li>
+                        <li>
+                            <a href="food_sobreP.html">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="food_sairContaP.html">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center pb-3 pt-3" style="position:absolute; left:0%;  right:0%; float:inherit; background-color: #DD3445; text-decoration: none;">
+                    <img src="img/logo.png" alt="menu"/>
+                </div>
+                <div id="page-content-wrapper">
+                    <div>
+                        <a class="btn btn-link" href="#menu-toggle" id="menu-toggle">
+                            <img src="img/glyphicons-517-menu-hamburger.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="row col-12">
+                <div class="col-1"></div>
+                <div class="col-12 ml-3">
+                    <h2 class="text-center mt-3 mb-3">Gerenciador de cardápio</h2>
+                    <div class="text-center">
+                        <a class="btn btn-danger btn-xs mb-2" href="food_cadastrarPrato.html">Cadastrar prato</a><br>
+                        <a class="btn btn-danger btn-xs mb-2 pl-4 pr-4" href="food_editarPrato.html">Editar prato</a><br>
+                        <a class="btn btn-danger btn-xs mb-2 pl-4 pr-4"  href="food_removerProdutos.html">Excluir prato</a>
+                    </div>
+                    <div id="gerenciar">
+                    </div>
+                    <hr>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </main>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Esqueceu a senha.</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/simple-sidebar.css" rel="stylesheet">
+        <script language="JavaScript" type="text/javascript" src="js/Json.js"></script>
+        <link type="text/css" rel="stylesheet" href="css/estiloestrela.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:600" type="text/css" rel="stylesheet" />
+        <link href="css/estilo.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDNiXGFq1hj1WdJ5t8mruEsuOEnzR1xt2w&amp"></script>
+    </head>
+    <body>
+        <header>
+            <div id="wrapper">
+                <div style="z-index: 1; background-color:#DC3545; color:white;" id="sidebar-wrapper">
+                    <ul class="sidebar-nav" style="font-size: 18px">
+                        <li>
+                            <a href="food_login.html">Login</a>
+                        </li>
+                        <li>
+                            <a href="food_cadastroCliente.html">Cadastro</a>
+                        </li>
+                        <li>
+                            <a href="food_convidarAmigo.html">Convidar Amigos</a>
+                        </li>
+                        <li>
+                            <a href="food_sobre.html">Sobre</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center pb-3 pt-3" style="position:absolute; left:0%;  right:0%; float:inherit; background-color: #DD3445; text-decoration: none;">
+                    <img src="img/logo.png"/>
+                </div>
+                <div id="page-content-wrapper">
+                    <div>
+                        <a class="btn btn-link" href="#menu-toggle" id="menu-toggle">
+                            <img src="img/glyphicons-517-menu-hamburger.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="row col-12">
+                <div class="col-1"></div>
+                <div class="col-10 ml-3">
+                    <div class="mt-5" id="login">
+                        <h3>Inserir Localização</h3>
+                        <form method="post">    
+                            <fieldset>
+                                <div>
+                                    <label>Endereço:</label>
+                                    <input type="text" id="txtEndereco" class="form-control mb-2" name="txtEndereco">
+                                </div>
+                                <div id="mapa" class="mb-3"></div>                    
+                                <button class="btn btn-danger btn-default btn-block" onclick="cadastrarLocalizacao();">Enviar</button>
+                                <input type="hidden" id="txtLatitude" name="txtLatitude">
+                                <input type="hidden" id="txtLongitude" name="txtLongitude">
+                            </fieldset>
+                        </form>
+                    </div>		
+                </div>
+            </div>	
+            <div class="col-1"></div>
+        </main>
+        <script src="js/jquery-1.8.0.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/mapa.js"></script>
+        <script src="js/jquery-ui.custom.min.js"></script>
+        <script>
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        </script>
+    </body>
+</html>

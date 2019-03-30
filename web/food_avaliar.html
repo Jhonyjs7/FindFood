@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Avaliar</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/simple-sidebar.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/estiloestrela.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script language="JavaScript" type="text/javascript" src="js/validacaol.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    </head>
+    <body>
+        <header>
+            <div id="wrapper">
+                <!-- Sidebar -->
+                <div style="z-index: 1; background-color:#DC3545; color:white;" id="sidebar-wrapper">
+                    <ul class="sidebar-nav" style="font-size: 18px">
+                        <li>
+                            <a href="food_estabeProximosCliente.html">Página Inicial</a>
+                        </li>
+                        <li>
+                            <a href="food_insLocClienteLog.html">Inserir Localização</a>
+                        </li>
+                        <li>
+                            <a href="food_minhaContac.html">Minha Conta</a>
+                        </li>
+                        <li>
+                            <a href="food_convidarAmigo.html">Convidar Amigo</a>
+                        </li>
+                        <li>
+                            <a href="food_sobreC.html">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="food_sairContaC.html">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center pb-3 pt-3" style="position:absolute; left:0%;  right:0%; float:inherit; background-color: #DD3445; text-decoration: none;">
+                    <img src="img/logo.png" alt="menu"/>
+                </div>
+                <div id="page-content-wrapper">
+                    <div>
+                        <a class="btn btn-link" href="#menu-toggle" id="menu-toggle">
+                            <img src="img/glyphicons-517-menu-hamburger.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="row col-12">
+                <div class="col-1"></div>
+                <div class="col-12 ml-3"> 					
+                    <div id="my-tab-content" class="tab-content">
+                        <div class="tab-pane active" id="login">
+                            <h2 class="text-center mt-5">Avaliação</h2>
+                            <form class="form-signin" action="food_informacoesFoodLogado.html" method="post">
+                                <div class="estrelas">
+                                    <div class="text-center">
+                                        <input type="radio" id="vazio" name="estrela" value="" checked required>
+
+                                        <label for="estrela_um"><i class="fa"></i></label>
+                                        <input type="radio" id="estrela_um" name="estrela" value="1" checked>
+
+                                        <label for="estrela_dois"><i class="fa"></i></label>
+                                        <input type="radio" id="estrela_dois" name="estrela" value="2">
+
+                                        <label for="estrela_tres"><i class="fa"></i></label>
+                                        <input type="radio" id="estrela_tres" name="estrela" value="3">
+
+                                        <label for="estrela_quatro"><i class="fa"></i></label>
+                                        <input type="radio" id="estrela_quatro" name="estrela" value="4">
+
+                                        <label for="estrela_cinco"><i class="fa"></i></label>
+                                        <input type="radio" id="estrela_cinco" name="estrela" value="5">
+                                    </div>
+
+                                    <label id="c" for="comentario"><h2 class="text-align">Comentários</h2></label>
+                                    <div id="texto">
+                                        <div class="text-center mb-3 ">	
+                                            <textarea class="form-control ml-2" style="height:100px" id="comentario" placeholder="Deixe um comentário aqui" required></textarea>
+                                        </div>
+                                        <div>
+                                            <input type="button" class="btn btn-danger btn-default btn-block" value="Enviar" onclick="avaliar()" />
+                                            <div id="divCorpoHtml"> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="col-1" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/Json.js"></script>
+        <script>
+                                                $("#menu-toggle").click(function (e) {
+                                                    e.preventDefault();
+                                                    $("#wrapper").toggleClass("toggled");
+                                                });
+        </script>
+    </body>
+</html>
